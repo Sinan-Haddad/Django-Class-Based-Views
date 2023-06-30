@@ -10,11 +10,11 @@ class post (models.Model):
     image=models.ImageField(upload_to='post-img/')
 
     class Meta:
-        verbose_name = ("")
-        verbose_name_plural = ("s")
+        verbose_name = ("post")
+        verbose_name_plural = ("posts")
 
     def __str__(self):
-        return self.name
+        return self.title
 
     def get_absolute_url(self):
         return reverse("_detail", kwargs={"pk": self.pk})
