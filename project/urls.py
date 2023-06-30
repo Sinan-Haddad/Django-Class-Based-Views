@@ -26,6 +26,7 @@ from project.settings import STATIC_ROOT, STATIC_URL
 urlpatterns = [
  
     path("admin/", admin.site.urls),
+    path('post/', include('post.urls'),name='post')
  
 ]
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
